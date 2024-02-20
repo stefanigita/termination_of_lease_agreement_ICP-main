@@ -1,0 +1,10 @@
+service: () -> {
+    createBussinessOwner: (text) -> (record {id:principal; name:text});
+    createCustomer: (text) -> (record {id:principal; name:text});
+    createLease: (principal, principal, principal, text) -> (variant {Ok:record {id:principal; startTime:text; businessOwner:principal; customer:principal; endTime:text; rentalItem:principal}; Err:variant {RentalItemNotFound:principal; BusinessOwnerNotFound:principal; CustomerNotFound:principal}});
+    createRentalItems: (text, nat64) -> (record {id:principal; quantity:nat64; items:text});
+    getBussinessOwnerId: (principal) -> (opt record {id:principal; name:text}) query;
+    getCustomerId: (principal) -> (opt record {id:principal; name:text}) query;
+    getLeaseId: (principal) -> (opt record {id:principal; startTime:text; businessOwner:principal; customer:principal; endTime:text; rentalItem:principal}) query;
+    getRentalItem: (principal) -> (opt record {id:principal; quantity:nat64; items:text}) query;
+}

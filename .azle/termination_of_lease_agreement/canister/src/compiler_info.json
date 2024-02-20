@@ -1,0 +1,1 @@
+{"canister_methods":{"queries":[{"name":"getBussinessOwnerId","composite":false},{"name":"getCustomerId","composite":false},{"name":"getRentalItem","composite":false},{"name":"getLeaseId","composite":false}],"updates":[{"name":"createBussinessOwner"},{"name":"createCustomer"},{"name":"createRentalItems"},{"name":"createLease"}],"callbacks":{}},"env_vars":[]}
